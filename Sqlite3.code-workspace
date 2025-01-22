@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "Sqlite3",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
