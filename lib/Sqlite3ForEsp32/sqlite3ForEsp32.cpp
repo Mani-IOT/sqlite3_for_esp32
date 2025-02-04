@@ -31,7 +31,7 @@ sqlite3* SQLite3ForEsp32::openDatabase() {
         Serial.printf("Cannot open database: %s\n", sqlite3_errmsg(db));
         return nullptr;
     }
-    Serial.println("Database opened successfully.");
+    //Serial.println("Database opened successfully.");
     return db;
 }
 
@@ -87,9 +87,9 @@ void SQLite3ForEsp32::printData() {
 
     const char *sql = "SELECT * FROM test;";
     auto callback = [](void *data, int argc, char **argv, char **azColName) -> int {
-        Serial.println("Row:");
+//        Serial.println("Row:");
         for (int i = 0; i < argc; i++) {
-            Serial.printf("  %s: %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+            Serial.printf("\n  %s, %s", azColName[i], argv[i] ? argv[i] : "NULL");
         }
         return 0;
     };
